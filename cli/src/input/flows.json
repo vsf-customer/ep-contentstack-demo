@@ -1,0 +1,320 @@
+{
+  "flows": [
+    {
+      "name": "Customers",
+      "slug": "customers",
+      "description": "Additional Customer attributes",
+      "enabled": true,
+      "fields": [
+        {
+          "name": "Accept Marketing Newsletters",
+          "slug": "accepts_marketing",
+          "description": "Accept Marketing Newsletters",
+          "field_type": "boolean",
+          "required": true,
+          "enabled": true,
+          "default": false,
+          "omit_null": false
+        },
+        {
+          "name": "Secret Key",
+          "slug": "secret_key",
+          "description": "Secret key of customer for token generation",
+          "field_type": "string",
+          "required": false,
+          "enabled": true,
+          "default": null,
+          "omit_null": false
+        }
+      ]
+    },
+    {
+      "name": "Address",
+      "slug": "addresses",
+      "description": "Additional Address attributes",
+      "enabled": true,
+      "fields": [
+        {
+          "name": "Default Address",
+          "slug": "default_address",
+          "description": "Property marks if the address is default",
+          "field_type": "boolean",
+          "required": true,
+          "enabled": true,
+          "default": false,
+          "omit_null": false
+        },
+        {
+          "field_type": "boolean",
+          "slug": "billing",
+          "name": "Billing Address",
+          "description": "Property to distinguish billing addresses",
+          "required": false,
+          "default": false,
+          "enabled": true,
+          "omit_null": false
+        }
+      ]
+    },
+    {
+      "name": "Product Extension",
+      "slug": "products(extension)",
+      "description": "Additional Product Attributes",
+      "enabled": true,
+      "fields": [
+        {
+          "field_type": "string",
+          "slug": "tax_rate",
+          "name": "Tax rate",
+          "description": "Tax Rate",
+          "required": false,
+          "default": "default",
+          "enabled": true,
+          "omit_null": false
+        },
+        {
+          "field_type": "string",
+          "slug": "short_description",
+          "name": "Short Description",
+          "description": "Product's short description",
+          "required": false,
+          "default": "",
+          "enabled": true,
+          "omit_null": false
+        },
+        {
+          "field_type": "string",
+          "slug": "brand",
+          "name": "Brand",
+          "description": "Product's brand",
+          "required": false,
+          "default": null,
+          "enabled": true,
+          "omit_null": false
+        },
+        {
+          "field_type": "boolean",
+          "slug": "hot",
+          "name": "Hot",
+          "description": "Is the product marked as 'Hot'",
+          "required": false,
+          "default": true,
+          "enabled": true,
+          "omit_null": false
+        },
+        {
+          "field_type": "boolean",
+          "slug": "new",
+          "name": "New",
+          "description": "Is the product marked as 'New'",
+          "required": false,
+          "default": true,
+          "enabled": true,
+          "omit_null": false
+        },
+        {
+          "field_type": "boolean",
+          "slug": "on_sale",
+          "name": "On Sale",
+          "description": "Is the product marked as 'On Sale'",
+          "required": false,
+          "default": false,
+          "enabled": true,
+          "omit_null": false
+        },
+        {
+          "field_type": "string",
+          "slug": "meta_description",
+          "name": "Meta Description",
+          "description": "Product's meta description",
+          "required": false,
+          "default": null,
+          "enabled": true,
+          "omit_null": false
+        },
+        {
+          "field_type": "string",
+          "slug": "meta_keyword",
+          "name": "Meta Keyword",
+          "description": "Product's meta keyword",
+          "required": false,
+          "default": null,
+          "enabled": true,
+          "omit_null": false
+        },
+        {
+          "field_type": "string",
+          "slug": "meta_title",
+          "name": "Meta Title",
+          "description": "Product's meta title",
+          "required": false,
+          "default": null,
+          "enabled": true,
+          "omit_null": false
+        }
+      ]
+    },
+    {
+      "name": "Products - related products and upsell",
+      "slug": "products(cross_up_sell)",
+      "description": "Product reference for Related Products, Cross Sell and Upsell",
+      "enabled": true,
+      "fields": [
+        {
+          "name": "Cross Sell Products",
+          "slug": "cross_sell",
+          "description": "Cross Sell Products",
+          "enabled": true,
+          "field_type": "string",
+          "default": null,
+          "required": false,
+          "omit_null": false
+        },
+        {
+          "name": "Up Sell Products",
+          "slug": "up_sell",
+          "description": "Up Sell Products",
+          "enabled": true,
+          "default": null,
+          "field_type": "string",
+          "required": false,
+          "omit_null": false
+        },
+        {
+          "name": "Related Products",
+          "slug": "related",
+          "description": "Related Products",
+          "enabled": true,
+          "default": null,
+          "field_type": "string",
+          "required": false,
+          "omit_null": false
+        }
+      ]
+    },
+    {
+      "name": "Shipping Provider",
+      "slug": "shipping_provider",
+      "description": "Creates a new object for shipping provider",
+      "enabled": true,
+      "fields": [
+        {
+          "field_type": "string",
+          "slug": "description",
+          "name": "Description",
+          "description": "Description",
+          "required": true,
+          "default": null,
+          "enabled": true,
+          "omit_null": false
+        },
+        {
+          "field_type": "string",
+          "slug": "label",
+          "name": "Label",
+          "description": "Shipping provider's name",
+          "required": false,
+          "default": "0",
+          "enabled": true,
+          "omit_null": false
+        },
+        {
+          "field_type": "string",
+          "slug": "value",
+          "name": "Value",
+          "description": "Value",
+          "required": true,
+          "default": "standard",
+          "enabled": true,
+          "omit_null": false
+        },
+        {
+          "field_type": "float",
+          "slug": "price",
+          "name": "Price",
+          "description": "Shipping provider's cost",
+          "required": false,
+          "default": 0,
+          "enabled": true,
+          "omit_null": false
+        }
+      ]
+    },
+    {
+      "name": "Carts",
+      "slug": "carts",
+      "description": "Additional Cart attributes - including shipping rates",
+      "enabled": true,
+      "fields": [
+        {
+          "field_type": "relationship",
+          "slug": "shipping_provider",
+          "name": "Shipping Provider",
+          "description": "The shipping provider used to send the order",
+          "required": false,
+          "default": null,
+          "enabled": true,
+          "omit_null": false,
+          "validation_rules": [
+            {
+              "type": "one-to-one",
+              "to": "shipping_provider"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CartItems",
+      "slug": "cart_items",
+      "description": "Additional Cart Item attributes",
+      "enabled": true,
+      "fields": [
+        {
+          "slug": "image_data",
+          "name": "Image Data",
+          "description": "Field to store image data for Custom Cart Item",
+          "field_type": "string",
+          "required": false,
+          "default": null,
+          "enabled": true,
+          "omit_null": false
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "slug": "orders",
+      "description": "Additional Order attributes - including shipping provider",
+      "enabled": true,
+      "fields": [
+        {
+          "field_type": "string",
+          "slug": "consignment_id",
+          "name": "Consignment ID",
+          "description": "Consignment ID",
+          "required": false,
+          "default": "0",
+          "enabled": true,
+          "omit_null": false
+        },
+        {
+          "field_type": "relationship",
+          "slug": "shipping_provider",
+          "name": "Shipping Provider",
+          "description": "The shipping provider used to send the order",
+          "required": false,
+          "default": null,
+          "enabled": true,
+          "omit_null": false,
+          "validation_rules": [
+            {
+              "type": "one-to-one",
+              "to": "shipping_provider"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

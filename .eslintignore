@@ -1,0 +1,7 @@
+**/node_modules/**/*
+**/lib/*
+_theme
+.nuxt
+composables/src/getters/*
+**/tests/*
+cli/dist/*
