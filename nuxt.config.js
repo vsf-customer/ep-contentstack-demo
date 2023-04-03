@@ -170,11 +170,6 @@ export default {
   // Router Configuration: https://nuxtjs.org/docs/configuration-glossary/configuration-router
   router: {
     extendRoutes(routes) {
-      routes.splice(
-        routes.findIndex((route) => route.name === 'my-account'),
-        1
-      );
-
       routes.push(...getRoutes(__dirname));
     }
   }

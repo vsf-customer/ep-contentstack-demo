@@ -7,14 +7,9 @@ import { defineComponent } from '@nuxtjs/composition-api';
 
 export default defineComponent({
   name: 'Home',
-  // beforeRouteEnter: (_to, _from, next) => {
-  //   next('/home-page');
-  // },
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-  // middleware({ redirect, route, localePath }) {
-  //   const { query } = route;
-  //   return redirect({ path: localePath('/home-page'), query });
-  // },
+  beforeRouteEnter: (_to, _from, next) => {
+    next('/home-page');
+  },
   setup() {
     return {};
   }
