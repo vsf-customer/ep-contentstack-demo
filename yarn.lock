@@ -1048,6 +1048,11 @@
   resolved "https://registry.yarnpkg.com/@colors/colors/-/colors-1.5.0.tgz#bb504579c1cae923e6576a4f5da43d25f97bdbd9"
   integrity sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==
 
+"@contentstack/utils@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@contentstack/utils/-/utils-1.2.0.tgz#b551257ce0fb2a1b74fb8f527e927244df36808b"
+  integrity sha512-K8LHm4No5uk5wDwGG34cTr+SJt4KZg2+0t/MPF+rQhfOQJ4jSzeY01HkfiPziKaz2njht1C4Uk3mWGSmfb8gtw==
+
 "@cspotcode/source-map-support@^0.8.0":
   version "0.8.1"
   resolved "https://registry.yarnpkg.com/@cspotcode/source-map-support/-/source-map-support-0.8.1.tgz#00629c35a688e05a88b1cda684fb9d5e73f000a1"
@@ -3301,6 +3306,16 @@
     "@typescript-eslint/types" "5.55.0"
     eslint-visitor-keys "^3.3.0"
 
+"@vsf-enterprise/contentstack@^0.3.6":
+  version "0.3.6"
+  resolved "https://registrynpm.storefrontcloud.io/@vsf-enterprise%2fcontentstack/-/contentstack-0.3.6.tgz#460dffe1f0cb921a955ae8e22c3c05d3d4e188d4"
+  integrity sha512-/dlmgQW1sD5Em2tWI0YtXhbFrPuju4b4cu7Vv022pTR6DGV0XmO29BQZbu+5opLHhNtJ82yDeQJpx/ktRe2a8g==
+  dependencies:
+    "@nuxtjs/composition-api" "^0.29.3"
+    "@vue-storefront/core" "^2.7.5"
+    contentstack "^3.15.0"
+    rollup "^2.50.3"
+
 "@vsf-enterprise/epcc-api@^1.2.1":
   version "1.2.1"
   resolved "https://registrynpm.storefrontcloud.io/@vsf-enterprise%2fepcc-api/-/epcc-api-1.2.1.tgz#fde975ec8aeb8a0cacc4ac0800e213bfca005330"
@@ -3330,6 +3345,16 @@
   integrity sha512-I9L9kdJpGREOH/ZVbDtUTtLW6MeNiXUKaBSN4K7+z+6ixQmxpfXUxoAY2yfI8BRfpT1yNnX27MHKneN/Ms5nrg==
   dependencies:
     axios "0.21.2"
+    express "^4.17.1"
+    lodash-es "^4.17.15"
+    vue "^2.6.11"
+
+"@vue-storefront/core@^2.7.5":
+  version "2.7.5"
+  resolved "https://registry.yarnpkg.com/@vue-storefront/core/-/core-2.7.5.tgz#69b629d1c540f52e39220de18fb6e836552ea240"
+  integrity sha512-mtUXY5FtFEUKUDcaOWGvOuYpPzT9nMvbJ1Z8CjcT48y4bEEnaq6doiAsMFGXGvUFJzOXqXiN3jpRZ3q9QRAsyA==
+  dependencies:
+    axios "0.22.0"
     express "^4.17.1"
     lodash-es "^4.17.15"
     vue "^2.6.11"
@@ -5780,6 +5805,17 @@ content-type@^1.0.4, content-type@~1.0.4:
   resolved "https://registry.yarnpkg.com/content-type/-/content-type-1.0.4.tgz#e138cc75e040c727b1966fe5e5f8c9aee256fe3b"
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
 
+contentstack@^3.15.0:
+  version "3.17.0"
+  resolved "https://registry.yarnpkg.com/contentstack/-/contentstack-3.17.0.tgz#b575c2efc7d861691dbec9b37d906c934f4fa412"
+  integrity sha512-6ZVvsuFT09L152FpT7RDtWPIIMxxs8lsdNHY7/u1Oqwnihwgy5zB0e6mfMYTqPApSINMOQkcOxhoCcgvnWtPIQ==
+  dependencies:
+    "@contentstack/utils" "^1.2.0"
+    es6-promise "^4.1.1"
+    isomorphic-fetch "^3.0.0"
+    localStorage "1.0.4"
+    qs "^6.11.1"
+
 convert-source-map@^1.3.0, convert-source-map@^1.4.0, convert-source-map@^1.6.0, convert-source-map@^1.7.0:
   version "1.9.0"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.9.0.tgz#7faae62353fb4213366d0ca98358d22e8368b05f"
@@ -7019,7 +7055,7 @@ es-to-primitive@^1.2.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
 
-es6-promise@^4.0.5:
+es6-promise@^4.0.5, es6-promise@^4.1.1:
   version "4.2.8"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.8.tgz#4eb21594c972bc40553d276e510539143db53e0a"
   integrity sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==
@@ -10740,6 +10776,11 @@ loader-utils@^2.0.0:
     emojis-list "^3.0.0"
     json5 "^2.1.2"
 
+localStorage@1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/localStorage/-/localStorage-1.0.4.tgz#57dfa28084385f81431accb8ae24b196398223f7"
+  integrity sha512-r35zrihcDiX+dqWlJSeIwS9nrF95OQTgqMFm3FB2D/+XgdmZtcutZOb7t0xXkhOEM8a9kpuu7cc28g1g36I5DQ==
+
 locate-path@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/locate-path/-/locate-path-3.0.0.tgz#dbec3b3ab759758071b58fe59fc41871af21400e"
@@ -13774,6 +13815,13 @@ qs@6.11.0, qs@^6.11.0:
   dependencies:
     side-channel "^1.0.4"
 
+qs@^6.11.1:
+  version "6.11.1"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.11.1.tgz#6c29dff97f0c0060765911ba65cbc9764186109f"
+  integrity sha512-0wsrzgTz/kAVIeuxSjnpGC56rzYtr6JT/2BwEvMaPhFIoYa1aGO8LbzuU1R0uUYQkLpWBTOj0l/CLAJB64J6nQ==
+  dependencies:
+    side-channel "^1.0.4"
+
 qs@~6.5.2:
   version "6.5.3"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
@@ -14256,6 +14304,13 @@ robots-parser@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/robots-parser/-/robots-parser-3.0.1.tgz#3d8a3cdfa8ac240cbb062a4bd16fcc0e0fb9ed23"
   integrity sha512-s+pyvQeIKIZ0dx5iJiQk1tPLJAWln39+MI5jtM8wnyws+G5azk+dMnMX0qfbqNetKKNgcWWOdi0sfm+FbQbgdQ==
+
+rollup@^2.50.3:
+  version "2.79.1"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.79.1.tgz#bedee8faef7c9f93a2647ac0108748f497f081c7"
+  integrity sha512-uKxbd0IhMZOhjAiD5oAFp7BqvkA4Dv47qpOCtaNvng4HBwdbWtdOh8f5nZNuk2rp51PMGk3bzfWu5oayNEuYnw==
+  optionalDependencies:
+    fsevents "~2.3.2"
 
 run-async@^2.0.0, run-async@^2.2.0, run-async@^2.4.0:
   version "2.4.1"

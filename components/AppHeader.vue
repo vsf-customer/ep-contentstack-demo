@@ -7,19 +7,10 @@
     >
       <!-- TODO: add mobile view buttons after SFUI team PR -->
       <template #logo>
-        <nuxt-link :to="localePath({ name: 'home' })" class="sf-header__logo">
-          <SfImage
-            src="/icons/logo.svg"
-            alt="Vue Storefront Next"
-            class="sf-header__logo-image"
-            :width="34"
-            :height="34"
-            image-tag="nuxt-img"
-          />
-        </nuxt-link>
+        <Logo />
       </template>
       <template #navigation>
-        <HeaderNavigation />
+        <CmsHeaderNavigation />
       </template>
       <template #aside>
         <LocaleSelector class="smartphone-only" />
@@ -136,6 +127,8 @@ import SearchResults from '@/components/SearchResults';
 import LocaleSelector from '@/components/LocaleSelector';
 import HeaderNavigation from '@/components/HeaderNavigation';
 import { clickOutside } from '@storefront-ui/vue/src/utilities/directives/click-outside/click-outside-directive.js';
+import Logo from './Logo.vue';
+import CmsHeaderNavigation from './CmsHeaderNavigation.vue';
 
 export default defineComponent({
   components: {
@@ -148,8 +141,10 @@ export default defineComponent({
     SfSearchBar,
     SearchResults,
     SfOverlay,
-    HeaderNavigation
-  },
+    HeaderNavigation,
+    Logo,
+    CmsHeaderNavigation
+},
   directives: { clickOutside },
   setup() {
     const router = useRouter();

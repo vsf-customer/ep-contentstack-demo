@@ -63,7 +63,7 @@
                   <span
                     v-if="
                       isInCart({
-                        product: { id: product.sku.replace('wishlist_', '') }
+                        // product: { id: product.sku.replace('wishlist_', '') }
                       })
                     "
                   >
@@ -188,7 +188,7 @@ export default defineComponent({
     );
     const addToCart = async (product) => {
       await addItemToCart({
-        product: { id: product.sku.replace($config.theme.wishlistPrefix, '') },
+        // product: { id: product.sku.replace($config.theme.wishlistPrefix, '') },
         quantity: 1
       });
 

@@ -8,6 +8,7 @@
   "dependencies": {
     "@nuxtjs/composition-api": "0.31.0",
     "@vsf-enterprise/epcc": "^1.2.1",
+    "@vsf-enterprise/contentstack": "^0.3.6",
     "@vue-storefront/middleware": "2.8.0-c.0",
     "dotenv": "^15.0.0",
     "node-fetch": "2"

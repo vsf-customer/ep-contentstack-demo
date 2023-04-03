@@ -20,14 +20,14 @@ export const forceLoginOnUnauthorizedResponse = async (
   const responseStatusRequiresLogout = ((response: { status?: number }) =>
     [401, 403].includes(response?.status));
 
-  if (
-    responseStatusRequiresLogout(response) ||
-      (Array.isArray(response.data?.errors) &&
-        response.data?.errors.some((error) =>
-          responseStatusRequiresLogout(error))
-      )
-  ) {
-    await (logoutFn ? logoutFn() : user.logout());
-    context.redirect('/?forceLogin');
-  }
+  // if (
+  //   responseStatusRequiresLogout(response) ||
+  //     (Array.isArray(response.data?.errors) &&
+  //       response.data?.errors.some((error) =>
+  //         responseStatusRequiresLogout(error))
+  //     )
+  // ) {
+  //   await (logoutFn ? logoutFn() : user.logout());
+  //   context.redirect('/?forceLogin');
+  // }
 };

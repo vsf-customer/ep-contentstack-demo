@@ -51,6 +51,7 @@
     "@storefront-ui/vue": "0.13.6",
     "@types/inquirer": "^8.2.0",
     "@types/node-fetch": "^2.6.1",
+    "@vsf-enterprise/contentstack": "^0.3.6",
     "@vsf-enterprise/epcc": "^1.2.1",
     "@vue-storefront/http-cache": "^2.7.1",
     "@vue-storefront/middleware": "2.8.0-c.0",

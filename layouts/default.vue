@@ -1,5 +1,6 @@
 <template>
   <div>
+    <RenderContent v-if="styleGuide.length" :content="styleGuide" />
     <LazyHydrate when-visible>
       <TopBar class="desktop-only" />
     </LazyHydrate>
@@ -40,6 +41,8 @@ import LazyHydrate from 'vue-lazy-hydration';
 import AppHeader from '@/components/AppHeader.vue';
 import Notification from '@/components/Notification';
 import BottomNavigation from '@/components/BottomNavigation.vue';
+import useCmsLayout from '~/composables/useCmsLayout';
+import { onSSR } from '@vue-storefront/core';
 
 export default defineComponent({
   name: 'DefaultLayout',
@@ -88,6 +91,13 @@ export default defineComponent({
     const { load: loadLocale } = useLocale();
     const { load: loadUser, isAuthenticated } = useUser();
     const { load: loadWishlist, set: setWishlist } = useWishlist();
+    const { getLayout, styleGuide } = useCmsLayout();
+
+    onSSR(async () => {
+      await Promise.all([
+        getLayout()
+      ]);
+    });
 
     onMounted(async () => {
       await Promise.all([loadStores(), loadUser(), loadCart(), loadLocale()]);
@@ -103,7 +113,8 @@ export default defineComponent({
     });
 
     return {
-      route
+      route,
+      styleGuide
     };
   }
 });

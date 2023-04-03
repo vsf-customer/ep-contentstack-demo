@@ -5,6 +5,7 @@ import theme from './themeConfig';
 import getRoutes from './routes';
 
 export default {
+  components: ['~/components/cms/page/', '~/components/cms/layout/'],
   server: {
     port: 3000,
     host: '0.0.0.0'
@@ -55,8 +56,8 @@ export default {
       '@vue-storefront/nuxt',
       {
         useRawSource: {
-          dev: ['@vsf-enterprise/epcc', '@vue-storefront/core'],
-          prod: ['@vsf-enterprise/epcc', '@vue-storefront/core']
+          dev: ['@vsf-enterprise/epcc', '@vue-storefront/core', '@vsf-enterprise/contentstack'],
+          prod: ['@vsf-enterprise/epcc', '@vue-storefront/core', '@vsf-enterprise/contentstack']
         }
       }
     ],
@@ -64,6 +65,7 @@ export default {
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@vsf-enterprise/contentstack/nuxt',
     'nuxt-i18n',
     'cookie-universal-nuxt',
     'vue-scrollto/nuxt',
