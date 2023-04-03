@@ -11,10 +11,10 @@ export default defineComponent({
   //   next('/home-page');
   // },
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-  middleware({ redirect, route, localePath }) {
-    const { query } = route;
-    return redirect({ path: localePath('/home-page'), query });
-  },
+  // middleware({ redirect, route, localePath }) {
+  //   const { query } = route;
+  //   return redirect({ path: localePath('/home-page'), query });
+  // },
   setup() {
     return {};
   }
