@@ -3,7 +3,7 @@ import { useUser } from '@/composables';
 import type { Hierarchy, Node } from '@moltin/sdk';
 import { useContext } from '@nuxtjs/composition-api';
 
-export declare type ApiError = AxiosError;
+export declare type ApiError<T = any> = AxiosError<T>;
 
 export const isApiError = (error: Record<string, any>): error is ApiError =>
   'isAxiosError' in error;
@@ -20,14 +20,14 @@ export const forceLoginOnUnauthorizedResponse = async (
   const responseStatusRequiresLogout = ((response: { status?: number }) =>
     [401, 403].includes(response?.status));
 
-  // if (
-  //   responseStatusRequiresLogout(response) ||
-  //     (Array.isArray(response.data?.errors) &&
-  //       response.data?.errors.some((error) =>
-  //         responseStatusRequiresLogout(error))
-  //     )
-  // ) {
-  //   await (logoutFn ? logoutFn() : user.logout());
-  //   context.redirect('/?forceLogin');
-  // }
+  if (
+    responseStatusRequiresLogout(response) ||
+      (Array.isArray(response.data?.errors) &&
+        response.data?.errors.some((error) =>
+          responseStatusRequiresLogout(error))
+      )
+  ) {
+    await (logoutFn ? logoutFn() : user.logout());
+    context.redirect('/?forceLogin');
+  }
 };

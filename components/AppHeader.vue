@@ -10,7 +10,7 @@
         <Logo />
       </template>
       <template #navigation>
-        <CmsHeaderNavigation />
+        <HeaderNavigation />
       </template>
       <template #aside>
         <LocaleSelector class="smartphone-only" />
