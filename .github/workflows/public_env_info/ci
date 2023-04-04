@@ -1,4 +1,4 @@
-API_BASE_URL=/api/
+API_BASE_URL=https://ep-content-p0vghfbh.europe-west1.gcp.storefrontcloud.io/api/
 API_SSR_BASE_URL=http://localhost:8181
 
 EPCC_CLIENT_ID=BSGbi0YCD8aAqwmZNvmYZMQV1Pi4pyYq0Sh7wtG2XH
