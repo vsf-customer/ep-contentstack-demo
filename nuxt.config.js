@@ -61,11 +61,11 @@ export default {
         }
       }
     ],
-    ['~/modules/epcc']
+    ['~/modules/epcc'],
+    ['~/modules/cnts']
   ],
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    '@vsf-enterprise/contentstack/nuxt',
     'nuxt-i18n',
     'cookie-universal-nuxt',
     'vue-scrollto/nuxt',
